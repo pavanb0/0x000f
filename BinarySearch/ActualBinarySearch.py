@@ -1,4 +1,5 @@
-
+nums = []
+target= 0
 left,right = 0,len(nums)-1
 while left<=right:
     mid = (right+left) // 2
