@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plant Identification</title>
+</head>
+<body>
+    <h1>Plant Identification</h1>
+    <form id="identificationForm" enctype="multipart/form-data">
+        <label for="images">Upload Plant Images:</label>
+        <input type="file" id="images" name="images" accept="image/*" multiple required><br>
+        <label for="latitude">Latitude:</label>
+        <input type="text" id="latitude" name="latitude"><br>
+        <label for="longitude">Longitude:</label>
+        <input type="text" id="longitude" name="longitude"><br>
+        <label for="similarImages">Include Similar Images:</label>
+        <input type="checkbox" id="similarImages" name="similar_images"><br>
+        <button type="submit">Identify Plant</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        const apiKey = 'pJIDJt8OaTTYopXXFmwiX28GEEa95mdAdM86Am9bhYADKvodET'; // Replace with your actual API key
+        const form = document.getElementById('identificationForm');
+        const resultDiv = document.getElementById('result');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(form);
+            const url = 'https://plant.id/api/v3/identification';
+
+            const requestHeaders = new Headers({
+                'Api-Key': apiKey
+            });
+
+            const requestOptions = {
+                method: 'POST',
+                headers: requestHeaders,
+                body: formData
+            };
+
+            fetch(url, requestOptions)
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data); // You can remove this line; it's for debugging
+                    resultDiv.innerHTML = JSON.stringify(data, null, 2); // Display JSON response nicely
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    resultDiv.innerHTML = 'An error occurred while fetching the data.';
+                });
+        });
+    </script>
+</body>
+</html>
