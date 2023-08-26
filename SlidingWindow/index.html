@@ -19,9 +19,9 @@
     <div id="result"></div>
 
     <script>
-        const apiKey = 'pJIDJt8OaTTYopXXFmwiX28GEEa95mdAdM86Am9bhYADKvodET'; // Replace with your actual API key
-        const form = document.getElementById('identificationForm');
+        
         const resultDiv = document.getElementById('result');
+        const form = document.getElementById('identificationForm'); // Add this line
 
         form.addEventListener('submit', function(event) {
             event.preventDefault();
@@ -42,8 +42,8 @@
             fetch(url, requestOptions)
                 .then(response => response.json())
                 .then(data => {
-                    console.log(data); // You can remove this line; it's for debugging
-                    resultDiv.innerHTML = JSON.stringify(data, null, 2); // Display JSON response nicely
+                    console.log(data);
+                    resultDiv.innerHTML = JSON.stringify(data, null, 2);
                 })
                 .catch(error => {
                     console.error('Error:', error);
