@@ -22,7 +22,7 @@ def BFS(startcity,goal,map):
             if i not in visited:
                 queue.append(i)
                 visited[i] = lCity
-                print(visited ,"\n")
-
+                # print(visited ,"\n")
+    print(visited)
     return [] # if no goal then return this
 

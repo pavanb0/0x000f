@@ -12,9 +12,9 @@ def takedata():
 
 if __name__ == '__main__':
     startcity,goal = takedata()
-    # ansBfs = BFS(startcity,goal,dict_gn)
-    ansDfs = DFS(startcity,goal,dict_gn)
-    print(ansDfs)
+    ansBfs = BFS(startcity,goal,dict_gn)
+    # ansDfs = DFS(startcity,goal,dict_gn)
+    print(ansBfs)
 # print(dict_gn.keys())
 
 """
