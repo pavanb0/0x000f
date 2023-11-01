@@ -8,3 +8,6 @@ class Solution:
                 ans[j]=ans[j-i]+1
             i<<=1
         return ans
+    
+# 2. DP + Least Significant Bit 
+# Time: O(n)
