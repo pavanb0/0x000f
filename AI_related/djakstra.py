@@ -19,10 +19,9 @@ def djakstras(map,startcity,endcity):
                 min_value = value
                 min_key = key
 
+        deque.append(min_key)
         
-        print(min_key,min_value)
-        break
     return "fail"
 
-out = djakstras(dict_gn,"Arad","Hirsova")
+out = djakstras(dict_gn,"Arad","Bucharest")
 print(out)
