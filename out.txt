@@ -1,13 +1,12 @@
-from stegano import lsb
 
-image_path = 'D:\\pavanReact\\0x000f\\AI_related\\AI_PRACTICALS\\myvenv\\src\\dumbwaystodie\\RomanianMap.png'
-data_to_hide = """
 
 #practcal 1
 
 
 def BFS_EASY(start,goal,map):
-    # print(start,'\n',goal,'\n',map)
+    # print(start,'
+',goal,'
+',map)
     from collections import deque
     queue = deque()
     queue.append(start)
@@ -228,7 +227,9 @@ accuracy = accuracy_score(y_test, y_pred)
 print("Classification Accuracy:", accuracy)
 
 # Display classification report
-print("\nClassification Report:\n", classification_report(y_test, y_pred))
+print("
+Classification Report:
+", classification_report(y_test, y_pred))
 
 
 
@@ -324,10 +325,8 @@ print("Frequent Itemsets:")
 print(frequent_itemsets)
 
 # Display association rules with support and confidence
-print("\nAssociation Rules:")
+print("
+Association Rules:")
 print(association_rules_df)
 
 
-"""
-secret_image = lsb.hide(image_path, data_to_hide)
-secret_image.save('output_image.png')

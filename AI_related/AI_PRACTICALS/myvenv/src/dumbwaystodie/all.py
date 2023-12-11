@@ -1,8 +1,3 @@
-from stegano import lsb
-
-image_path = 'D:\\pavanReact\\0x000f\\AI_related\\AI_PRACTICALS\\myvenv\\src\\dumbwaystodie\\RomanianMap.png'
-data_to_hide = """
-
 #practcal 1
 
 
@@ -326,8 +321,3 @@ print(frequent_itemsets)
 # Display association rules with support and confidence
 print("\nAssociation Rules:")
 print(association_rules_df)
-
-
-"""
-secret_image = lsb.hide(image_path, data_to_hide)
-secret_image.save('output_image.png')
