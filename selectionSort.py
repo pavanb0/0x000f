@@ -8,7 +8,7 @@ def maxInArray(arr):
         
     return cur_max
     
-def sortArray(arr):#insertion sort
+def sortArray(arr):#Selection Sort
     i = 0
     while i<len(arr):
         cur_min = i
