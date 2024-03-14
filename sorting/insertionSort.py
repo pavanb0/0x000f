@@ -1,6 +1,7 @@
 def insertionSort(arr)->None:
     i = 0
     while i<= len(arr):
+        minNum = 0
         for k in range(i,len(arr)):
             print(arr[k])
         print('\n')
