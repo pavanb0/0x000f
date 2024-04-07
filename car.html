@@ -32,10 +32,10 @@
   <script>
     function sendCommand(command) {
       var xhttp = new XMLHttpRequest();
-      xhttp.open("GET", "http://192.168.0.103/?State=" + command, true);
+      xhttp.open("GET", "http://192.168.0.109/?State=" + command, true);
       xhttp.send();
       setTimeout(() => {
-        xhttp.open("GET", "http://192.168.0.103/?State=" + "S", true);
+        xhttp.open("GET", "http://192.168.0.109/?State=" + "S", true);
         xhttp.send();
 
       }, 200)
